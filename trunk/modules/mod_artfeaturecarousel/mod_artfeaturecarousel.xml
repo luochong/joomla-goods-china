@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" position="status" method="upgrade">
+	<name>Art Feature Carousel</name>
+	<author>artetics.com</author>
+	<creationDate>July 2010</creationDate>
+	<copyright>Copyright (C) 2010 artetics.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<authorEmail>info@artetics.com</authorEmail>
+	<authorUrl>www.artetics.com</authorUrl>
+	<version>1.3.12</version>
+	<description><![CDATA[Art Feature Carousel module shows images in a highly-customizable carousel. Module can be configured in Extensions -> Module Manager -> Art Feature Carousel. More information here: http://www.artetics.com/ARTools/art-feature-carousel<br /><br />&copy;&nbsp;<a href="http://www.artetics.com">Artetics.com</a> - Start Point For Your Website.]]></description>
+	<files>
+		<filename module="mod_artfeaturecarousel">mod_artfeaturecarousel.php</filename>
+		<filename module="mod_artfeaturecarousel">js/jquery.js</filename>
+		<filename module="mod_artfeaturecarousel">js/jquery.featureCarousel.js</filename>
+		<filename module="mod_artfeaturecarousel">css/featureCarousel.css</filename>
+	</files>
+	<params>
+		<param name="loadJQuery" type="list" default="1" label="Load jQuery library" description="Load jQuery javascript library? Choose no if it is always included in your pages">
+		  <option value="1">yes</option>
+		  <option value="0">no</option>
+		</param>
+    <param name="linksNewWindow" type="list" default="0" label="Links in a new window" description="Open links in a new window">
+		  <option value="1">yes</option>
+		  <option value="0">no</option>
+		</param>
+    <param name="width" type="text" default="960" label="Width" description="Width"/>
+    <param name="height" type="text" default="280" label="Height" description="Height"/>
+    <param name="largeFeatureWidth" type="text" default="0" label="Large feature width" description="Large feature width"/>
+    <param name="largeFeatureHeight" type="text" default="0" label="Large feature height" description="Large feature height"/>
+    <param name="smallFeatureWidth" type="text" default="0" label="Small feature width" description="Small feature width"/>
+    <param name="smallFeatureHeight" type="text" default="0" label="Small feature height" description="Small feature height"/>
+    <param name="autoPlay" type="text" default="0" label="Auto Play time" description="Auto play time in milliseconds. Use 0 to disable autoplay"/>
+		<param name="image1" type="text" default="" label="Image 1" description="Image 1"/>
+		<param name="link1" type="text" default="" label="Link 1" description="Link 1"/>
+		<param name="description1" type="textarea" default="" rows="20" cols="45" label="Description 1" description="Description 1" />
+		
+		<param name="image2" type="text" default="" label="Image 2" description="Image 2"/>
+		<param name="link2" type="text" default="" label="Link 2" description="Link 2"/>
+		<param name="description2" type="textarea" default="" rows="20" cols="45" label="Description 2" description="Description 2" />
+		
+		<param name="image3" type="text" default="" label="Image 3" description="Image 3"/>
+		<param name="link3" type="text" default="" label="Link 3" description="Link 3"/>
+		<param name="description3" type="textarea" default="" rows="20" cols="45" label="Description 3" description="Description 3" />
+		
+		<param name="image4" type="text" default="" label="Image 4" description="Image 4"/>
+		<param name="link4" type="text" default="" label="Link 4" description="Link 4"/>
+		<param name="description4" type="textarea" default="" rows="20" cols="45" label="Description 4" description="Description 4" />
+		
+		<param name="image5" type="text" default="" label="Image 5" description="Image 5"/>
+		<param name="link5" type="text" default="" label="Link 5" description="Link 5"/>
+		<param name="description5" type="textarea" default="" rows="20" cols="45" label="Description 5" description="Description 5" />
+		
+		<param name="image6" type="text" default="" label="Image 6" description="Image 6"/>
+		<param name="link6" type="text" default="" label="Link 6" description="Link 6"/>
+		<param name="description6" type="textarea" default="" rows="20" cols="45" label="Description 6" description="Description 6" />
+		
+		<param name="image7" type="text" default="" label="Image 7" description="Image 7"/>
+		<param name="link7" type="text" default="" label="Link 7" description="Link 7"/>
+		<param name="description7" type="textarea" default="" rows="20" cols="45" label="Description 7" description="Description 7" />
+    
+    <param name="image8" type="text" default="" label="Image 8" description="Image 8"/>
+		<param name="link8" type="text" default="" label="Link 8" description="Link 8"/>
+		<param name="description8" type="textarea" default="" rows="20" cols="45" label="Description 8" description="Description 8" />
+    
+    <param name="image9" type="text" default="" label="Image 9" description="Image 9"/>
+		<param name="link9" type="text" default="" label="Link 9" description="Link 9"/>
+		<param name="description9" type="textarea" default="" rows="20" cols="45" label="Description 9" description="Description 9" />
+    
+    <param name="image10" type="text" default="" label="Image 10" description="Image 10"/>
+		<param name="link10" type="text" default="" label="Link 10" description="Link 10"/>
+		<param name="description10" type="textarea" default="" rows="20" cols="45" label="Description 10" description="Description 10" />
+    
+    <param name="image11" type="text" default="" label="Image 11" description="Image 11"/>
+    <param name="link11" type="text" default="" label="Link 11" description="Link 11"/>
+    <param name="description11" type="textarea" default="" rows="20" cols="45" label="Description 11" description="Description 11" />
+
+    <param name="image12" type="text" default="" label="Image 12" description="Image 12"/>
+    <param name="link12" type="text" default="" label="Link 12" description="Link 12"/>
+    <param name="description12" type="textarea" default="" rows="20" cols="45" label="Description 12" description="Description 12" />
+
+    <param name="image13" type="text" default="" label="Image 13" description="Image 13"/>
+    <param name="link13" type="text" default="" label="Link 13" description="Link 13"/>
+    <param name="description13" type="textarea" default="" rows="20" cols="45" label="Description 13" description="Description 13" />
+
+    <param name="image14" type="text" default="" label="Image 14" description="Image 14"/>
+    <param name="link14" type="text" default="" label="Link 14" description="Link 14"/>
+    <param name="description14" type="textarea" default="" rows="20" cols="45" label="Description 14" description="Description 14" />
+
+	</params>
+</install>
