@@ -42,9 +42,10 @@
     </table>
 </div>
  
-<input type="hidden" name="option" value="com_goods" />
+<input type="hidden" name="option" value="<?php echo $option?>" />
 <input type="hidden" name="task" value="" />
 <input type="hidden" name="boxchecked" value="0" />
 <input type="hidden" name="controller" value="goods" />
+<?php echo JHTML::_( 'form.token' ); ?>
  
 </form>
