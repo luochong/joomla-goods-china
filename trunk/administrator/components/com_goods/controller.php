@@ -21,43 +21,40 @@ jimport('joomla.application.component.controller');
 class GoodsController extends JController
 {
 	
-	function __construct()
+	function __construct($config = array())
 	{
-	    parent::__construct();
-	 
-	    // Register Extra tasks
-	    $this->registerTask( 'add', 'edit' );
+		parent::__construct($config);
+
+		// Register Extra tasks
+		$this->registerTask( 'add',  'display' );
+		$this->registerTask( 'edit', 'display' );
+		$this->registerTask( 'apply', 'save' );
+	}
+
+	function display( )
+	{
+		switch($this->getTask())
+		{
+			case 'add'     :
+			{
+				JRequest::setVar( 'hidemainmenu', 1 );
+				JRequest::setVar( 'layout', 'form'  );
+				JRequest::setVar( 'edit', false );					
+			} break;
+			case 'edit'    :
+			{
+				JRequest::setVar( 'hidemainmenu', 1 );
+				JRequest::setVar( 'layout', 'form'  );
+				JRequest::setVar( 'edit', true );
+			} break;
+			default : {				
+				JRequest::setVar( 'layout'  , 'default');
+			}
+		}	
+
+		parent::display();
 	}
 
 	
-	/**
-     * Method to display the view
-     *
-     * @access    public
-     */
-    function display()
-    {
-        parent::display();
-    }
-    
-    function add()
-    {
-    	
-    }
-    
-    /**
-	 * display the edit form
-	 * @return void
-	 */
-	function edit()
-	{
-	   // JRequest::setVar( 'view', 'hello' );
-	    JRequest::setVar( 'layout', 'form' );
-	    JRequest::setVar( 'hidemainmenu', 1 );
-	    JRequest::setVar( 'hidemainmenu', 1 );
-	 
-	    parent::display();
-	}
-
  
 }
