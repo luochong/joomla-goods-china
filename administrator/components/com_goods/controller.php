@@ -33,17 +33,16 @@ class GoodsController extends JController
 
 	function display( )
 	{
+		JRequest::setVar( 'hidemainmenu', 1 );
 		switch($this->getTask())
 		{
 			case 'add'     :
 			{
-				JRequest::setVar( 'hidemainmenu', 1 );
 				JRequest::setVar( 'layout', 'form'  );
 				JRequest::setVar( 'edit', false );					
 			} break;
 			case 'edit'    :
 			{
-				JRequest::setVar( 'hidemainmenu', 1 );
 				JRequest::setVar( 'layout', 'form'  );
 				JRequest::setVar( 'edit', true );
 			} break;
@@ -53,6 +52,20 @@ class GoodsController extends JController
 		}	
 
 		parent::display();
+	}
+	
+	function save()
+	{
+		
+	}
+	
+	
+	function cancel()
+	{
+		// Check for request forgeries
+		JRequest::checkToken() or jexit( 'Invalid Token' );
+		global $option;
+		$this->setRedirect( 'index.php?option='.$option );
 	}
 
 	
