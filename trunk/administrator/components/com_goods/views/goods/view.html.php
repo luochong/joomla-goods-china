@@ -22,14 +22,12 @@ class GoodsViewGoods extends JView
 {
     function display($tpl = null)
     {
-        JToolBarHelper::title( JText::_( '商品管理' ), 'generic.png' );
-    	if(JRequest::getVar( 'layout','default') != 'form'){
+        if($this->getLayout() == 'default'){
         	    
-		        JToolBarHelper::deleteList();
-		        JToolBarHelper::editListX();
-		        JToolBarHelper::addNewX();
+
         }
         // Get data from the model
+        $this->_getToolBar($this->getLayout());
         $items =& $this->get('Data');
 		$this->assignRef( 'items', $items );
         parent::display($tpl);
@@ -37,7 +35,27 @@ class GoodsViewGoods extends JView
     
     
     
+    function _getToolBar($layout)
+    {
+    	if($layout == 'form')
+    	{
+    		JToolBarHelper::title( JText::_( '商品管理' ), 'generic.png' );
+    		JToolBarHelper::save();
+    		JToolBarHelper::cancel();
+    		//JToolBarHelper::
+    	}
+    	else 
+    	{
+			JToolBarHelper::title( JText::_( '商品管理' ), 'generic.png' );
+		    JToolBarHelper::deleteList();
+	        JToolBarHelper::editListX();
+	        JToolBarHelper::publishList();
+	        JToolBarHelper::unpublishList();
+	        JToolBarHelper::addNewX();
+		        
+    	}
     
+    }
     
     
 }
