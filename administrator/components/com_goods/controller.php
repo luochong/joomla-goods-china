@@ -51,8 +51,9 @@ class GoodsController extends JController
 	 */
 	function edit()
 	{
-	    JRequest::setVar( 'view', 'hello' );
+	   // JRequest::setVar( 'view', 'hello' );
 	    JRequest::setVar( 'layout', 'form' );
+	    JRequest::setVar( 'hidemainmenu', 1 );
 	    JRequest::setVar( 'hidemainmenu', 1 );
 	 
 	    parent::display();

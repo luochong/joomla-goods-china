@@ -23,12 +23,21 @@ class GoodsViewGoods extends JView
     function display($tpl = null)
     {
         JToolBarHelper::title( JText::_( '商品管理' ), 'generic.png' );
-        JToolBarHelper::deleteList();
-        JToolBarHelper::editListX();
-        JToolBarHelper::addNewX();
+    	if(JRequest::getVar( 'layout','default') != 'form'){
+        	    
+		        JToolBarHelper::deleteList();
+		        JToolBarHelper::editListX();
+		        JToolBarHelper::addNewX();
+        }
         // Get data from the model
         $items =& $this->get('Data');
 		$this->assignRef( 'items', $items );
         parent::display($tpl);
     }
+    
+    
+    
+    
+    
+    
 }
