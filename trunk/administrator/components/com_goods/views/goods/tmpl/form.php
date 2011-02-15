@@ -18,7 +18,7 @@
 <form action="index.php" method="post" name="adminForm">
 <div class="col width-50">
 	<fieldset class="adminform">
-		<legend>细节设置</legend>
+		<legend>商品介绍</legend>
 <table class="admintable">
     <tr>
         <td class="key"><label for="name"><?php echo JText::_( '商品名称' ); ?>:</label></td>
