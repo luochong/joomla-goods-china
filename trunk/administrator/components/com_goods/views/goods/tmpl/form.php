@@ -16,6 +16,9 @@
 	}
 </script>
 <form action="index.php" method="post" name="adminForm">
+<div class="col width-50">
+	<fieldset class="adminform">
+		<legend>细节设置</legend>
 <table class="admintable">
     <tr>
         <td class="key"><label for="name"><?php echo JText::_( '商品名称' ); ?>:</label></td>
@@ -29,7 +32,22 @@
         <td  class="key"><label for="shop_price"><?php echo JText::_( '现价' ); ?>:</label></td>
         <td>￥<input id="shop_price" name="shop_price" value="<?php echo $this->item->shop_price;?>" type="text" size="30" maxlength="50" /></td>
     </tr>
-    
+    <tr>
+			<td class="key">
+				<?php echo JText::_( '发布' ); ?>:
+			</td>
+			<td>
+				<?php echo $this->lists['published']; ?>
+			</td>
+     </tr>
+     <tr>
+			<td class="key">
+				<?php echo JText::_( '促销' ); ?>:
+			</td>
+			<td>
+				<?php echo $this->lists['promote']; ?>
+			</td>
+     </tr>
    	<tr>
 		<td class="key">
 			<label for="image">
@@ -57,36 +75,20 @@
 			?>
 		</td>
 	</tr>
-	<tr>
-			<td class="key">
-				<?php echo JText::_( '发布' ); ?>:
-			</td>
-			<td>
-				<?php echo $this->lists['published']; ?>
-			</td>
-     </tr>
-     <tr>
-			<td class="key">
-				<?php echo JText::_( '促销' ); ?>:
-			</td>
-			<td>
-				<?php echo $this->lists['promote']; ?>
-			</td>
-     </tr>
-	 <tr>
-		<td class="key">
-			<label for="image">
-				<?php echo JText::_( '商品介绍' ); ?>:
-			</label>
-		</td>
-		<td>
-			<?php if ($this->editor) 
-			         echo $this->editor->display( 'intro',  $this->item->intro , '700', '550', '75', '20' ) ;// parameters : areaname, content, width, height, cols, rows
-             ?>
-		</td>
-	</tr>
-
+	
 </table>
+</fieldset>
+</div>
+<div class="col width-50">
+	<fieldset class="adminform">
+		<legend><?php echo JText::_( '商品介绍' ); ?>:</legend>
+
+			<?php if ($this->editor) 
+			         echo $this->editor->display( 'intro',  $this->item->intro , '100%', '550', '75', '20' ) ;
+			         // parameters : areaname, content, width, height, cols, rows
+             ?>
+	</fieldset>
+</div>
 <input type="hidden" name="option" value="<?php echo $option ?>" />
 <input type="hidden" name="cid[]" value="<?php echo $this->item->id; ?>" />
 <input type="hidden" name="task" value="" />
