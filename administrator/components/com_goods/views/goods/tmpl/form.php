@@ -32,6 +32,14 @@
         <td  class="key"><label for="shop_price"><?php echo JText::_( '现价' ); ?>:</label></td>
         <td>￥<input id="shop_price" name="shop_price" value="<?php echo $this->item->shop_price;?>" type="text" size="30" maxlength="50" /></td>
     </tr>
+     <tr>
+			<td class="key">
+				<?php echo JText::_( '分类' ); ?>:
+			</td>
+			<td>
+				<?php echo $this->lists['catid']; ?>
+			</td>
+     </tr>
     <tr>
 			<td class="key">
 				<?php echo JText::_( '发布' ); ?>:
@@ -75,7 +83,6 @@
 			?>
 		</td>
 	</tr>
-	
 </table>
 </fieldset>
 </div>

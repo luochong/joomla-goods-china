@@ -55,8 +55,10 @@ class GoodsModelGoods extends JModel
 	    // Lets load the data if it doesn't already exist
 	    if (empty( $this->_items ))
 	    {
-	        $query = ' SELECT * '
-	           . ' FROM #__goods ';
+	         $query = 'SELECT w.*, cc.title AS category,'.
+					' cc.published AS cat_pub, cc.access AS cat_access'.
+					' FROM #__goods AS w' .
+					' LEFT JOIN #__categories AS cc ON cc.id = w.catid';
 	        $this->_items = $this->_getList( $query );
 	    }
 	 
@@ -73,8 +75,12 @@ class GoodsModelGoods extends JModel
             }
 	        else 
 	        {
-    	        $query = ' SELECT * '
-        	           . ' FROM #__goods where id = '.$this->_id;
+        	    $query = 'SELECT w.*, cc.title AS category,'.
+					' cc.published AS cat_pub, cc.access AS cat_access'.
+					' FROM #__goods AS w' .
+					' LEFT JOIN #__categories AS cc ON cc.id = w.catid' .
+					' WHERE w.id = '.(int) $this->_id;       
+        	           
         	    $this->_db->setQuery($query);
         		$this->_item = $this->_db->loadObject();
 	        }
@@ -142,8 +148,6 @@ class GoodsModelGoods extends JModel
 	
 	function publish($cid = array(), $publish = 1)
 	{
-		$user 	=& JFactory::getUser();
-
 		if (count( $cid ))
 		{
 			JArrayHelper::toInteger($cid);
@@ -151,6 +155,26 @@ class GoodsModelGoods extends JModel
 
 			$query = 'UPDATE #__goods'
 				. ' SET published = '.(int) $publish
+				. ' WHERE id IN ( '.$cids.' )'
+			;
+			$this->_db->setQuery( $query );
+			if (!$this->_db->query()) {
+				$this->setError($this->_db->getErrorMsg());
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	function promotion($cid = array(), $promotion = 1)
+	{
+	    if (count( $cid ))
+		{
+			JArrayHelper::toInteger($cid);
+			$cids = implode( ',', $cid );
+
+			$query = 'UPDATE #__goods'
+				. ' SET is_promotion = '.(int) $promotion
 				. ' WHERE id IN ( '.$cids.' )'
 			;
 			$this->_db->setQuery( $query );

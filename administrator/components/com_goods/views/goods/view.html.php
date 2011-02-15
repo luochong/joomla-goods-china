@@ -22,6 +22,7 @@ class GoodsViewGoods extends JView
 {
     function display($tpl = null)
     {
+        global $option;
         if($this->getLayout() == 'form')
     	{
             $this->_getFormToolBar();
@@ -35,6 +36,7 @@ class GoodsViewGoods extends JView
     		$lists['image'] .= '</div></div>';
     		$lists['published'] = JHTML::_('select.booleanlist',  'published', 'class="inputbox"', $item->published );
     		$lists['promote'] = JHTML::_('select.booleanlist',  'is_promotion', 'class="inputbox"', $item->is_promotion );
+    		$lists['catid']   = JHTML::_('list.category',  'catid', $option, intval( $item->catid ) );
     		
     		$editor = &JFactory::getEditor();
     		
@@ -67,7 +69,6 @@ class GoodsViewGoods extends JView
 	        JToolBarHelper::editListX();
 	        JToolBarHelper::publishList();
 	        JToolBarHelper::unpublishList();
-	        JToolBarHelper::archiveList();
 	        JToolBarHelper::deleteList('你确定要删除吗？');
     }
 }
