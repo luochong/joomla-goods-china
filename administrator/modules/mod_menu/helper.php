@@ -216,7 +216,7 @@ class modMenuHelper
 
 		/*
 		 * System SubMenu
-		 */
+		
 		if ($canConfig || $canCheckin)
 		{
 			$menu->addChild(new JMenuNode(JText::_('Tools')), true);
@@ -238,17 +238,17 @@ class modMenuHelper
 			$menu->addChild(new JMenuNode(JText::_('Purge Expired Cache'), 'index.php?option=com_cache&task=purgeadmin', 'class:config'));
 
 			$menu->getParent();
-		}
+		} */
 
 		/*
 		 * Help SubMenu
-		 */
+		
 		$menu->addChild(new JMenuNode(JText::_('Help')), true);
 		$menu->addChild(new JMenuNode(JText::_('Joomla! Help'), 'index.php?option=com_admin&task=help', 'class:help'));
 		$menu->addChild(new JMenuNode(JText::_('System Info'), 'index.php?option=com_admin&task=sysinfo', 'class:info'));
 
 		$menu->getParent();
-
+        */
 		$menu->renderMenu('menu', '');
 	}
 

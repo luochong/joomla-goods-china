@@ -17,7 +17,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 $version = new JVersion();
 
 ?>
-<div>
+<!--<div>
 	<?php echo $version->URL; ?>
 </div>
 
@@ -28,3 +28,6 @@ $version = new JVersion();
 <div>
 	<a href="http://www.joomla.org/content/blogcategory/32/66/" target="_blank"><?php echo JText::_( 'Check for latest Version' ); ?></a>
 </div>
+-->
+			<a href="http://www.joomla.org" target="_blank">艾斯沃整体家</a>
+			<?php echo  JText::_('ISFREESOFTWARE') ?>

@@ -13,7 +13,7 @@ class TableGoods extends JTable
 	var $brand_id = null;
 	var $market_price = null;	//原价
 	var $shop_price = null;     //现价
-	var $is_promotion = null;  //是否促销
+	var $is_promotion = 0;  //是否促销
 	var $is_discount = null;
 	var $is_best = null;	
 	var $goods_discount = null;
@@ -28,7 +28,7 @@ class TableGoods extends JTable
 	var $slide_img = null;
     var $intro = null; //介绍
     var $name = null; //商品名称
-    var $published = 0;
+    var $published = 1;
     var $catid = 0;
 
 	function __construct(&$db)

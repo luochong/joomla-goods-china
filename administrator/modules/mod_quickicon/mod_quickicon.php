@@ -55,8 +55,11 @@ if (!defined( '_JOS_QUICKICON_MODULE' ))
 
 		$link = 'index.php?option=com_media';
 		quickiconButton( $link, 'icon-48-media.png', JText::_( 'Media Manager' ) );
+		
+		$link = 'index.php?option=com_goods';
+		quickiconButton( $link, 'icon-48-generic.png', JText::_( '商品管理' ) );
 
-		// Get the current JUser object
+		// Get the current JUser object icon-48-generic.png
 		$user = &JFactory::getUser();
 
 		if ( $user->get('gid') > 23 ) {
@@ -64,10 +67,10 @@ if (!defined( '_JOS_QUICKICON_MODULE' ))
 			quickiconButton( $link, 'icon-48-menumgr.png', JText::_( 'Menu Manager' ) );
 		}
 
-		if ( $user->get('gid') > 24 ) {
-			$link = 'index.php?option=com_languages&amp;client=0';
-			quickiconButton( $link, 'icon-48-language.png', JText::_( 'Language Manager' ) );
-		}
+//		if ( $user->get('gid') > 24 ) {
+//			$link = 'index.php?option=com_languages&amp;client=0';
+//			quickiconButton( $link, 'icon-48-language.png', JText::_( 'Language Manager' ) );
+//		}
 
 		if ( $user->get('gid') > 23 ) {
 			$link = 'index.php?option=com_users';
