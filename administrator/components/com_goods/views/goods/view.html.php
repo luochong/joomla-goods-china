@@ -70,9 +70,4 @@ class GoodsViewGoods extends JView
 	        JToolBarHelper::archiveList();
 	        JToolBarHelper::deleteList('你确定要删除吗？');
     }
-    
-   
-    
-    
-    
 }
