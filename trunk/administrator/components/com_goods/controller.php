@@ -112,15 +112,11 @@ class GoodsController extends JController
 	    global $option;
 	   
 		$model = $this->getModel();
-		$msg = '';
 		if(!$model->publish($cid, 1)) {
 			echo "<script> alert('".$model->getError(true)."'); window.history.go(-1); </script>\n";
 		}
-		else 
-		{
-		    $msg = JText::_( '发布成功' );
-		}
-		$this->setRedirect( 'index.php?option='.$option,$msg );
+		
+		$this->setRedirect( 'index.php?option='.$option );
 	}
 	
 	function unpublish()
@@ -129,15 +125,40 @@ class GoodsController extends JController
 	    global $option;
 	   
 		$model = $this->getModel();
-		$msg = '';
+	
 		if(!$model->publish($cid, 0)) {
 			echo "<script> alert('".$model->getError(true)."'); window.history.go(-1); </script>\n";
 		}
-		else 
-		{
-		    $msg = JText::_( '操作成功' );
+		
+		$this->setRedirect( 'index.php?option='.$option );
+	}
+	
+	function promotion()
+	{
+		$cid = $this->_getCid();
+	    global $option;
+	   
+		$model = $this->getModel();
+		
+		if(!$model->promotion($cid, 1)) {
+			echo "<script> alert('".$model->getError(true)."'); window.history.go(-1); </script>\n";
 		}
-		$this->setRedirect( 'index.php?option='.$option,$msg );
+		
+		$this->setRedirect( 'index.php?option='.$option );
+	}
+	
+	function unpromotion()
+	{
+	    $cid = $this->_getCid();
+	    global $option;
+	   
+		$model = $this->getModel();
+
+		if(!$model->promotion($cid, 0)) {
+			echo "<script> alert('".$model->getError(true)."'); window.history.go(-1); </script>\n";
+		}
+
+		$this->setRedirect( 'index.php?option='.$option );
 	}
 	
 	function _getCid()

@@ -29,6 +29,7 @@ class TableGoods extends JTable
     var $intro = null; //介绍
     var $name = null; //商品名称
     var $published = 0;
+    var $catid = 0;
 
 	function __construct(&$db)
 	{
