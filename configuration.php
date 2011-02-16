@@ -50,7 +50,7 @@ class JConfig {
 	var $lifetime = '15';
 	var $session_handler = 'database';
 	var $password = '';
-	var $sitename = '艾斯沃整体家';
+	var $sitename = 'abc';
 	var $MetaDesc = 'Joomla!（ Joomla! ）——全球最好的企业信息门户网站及内容管理系统的构建软件';
 	var $MetaKeys = 'joomla, Joomla,  Joomla!';
 	var $offline_message = '本站正在维护中，暂不能访问。 请稍后再访问本站。';

@@ -89,11 +89,11 @@ html{
 .navgation ul li a span{
 	padding:0 15px 0 0;
 	}
-.navgation ul li a:hover,.navgation ul li a.current{
+.navgation ul li a:hover,.navgation ul li.active a{
 	background:url('../images/hover.gif') 0 0 no-repeat;
 	color:#fff;
 	}
-.navgation ul li a:hover span,.navgation ul li a.current span{
+.navgation ul li a:hover span,.navgation ul li.active a span{
 	background:url('../images/hover-repeat.gif') right top no-repeat transparent;   
 }
 /*   banner  */
@@ -333,11 +333,11 @@ h1{
    line-height:30px;
    padding:0 15px 0 0;   
    }
-.sub-nav li a:hover,.sub-nav li a.current{
+.sub-nav li a:hover,.sub-nav li.active a{
    color:#f3ae35;
    background:url('../images/sub-hover.gif') 0 0 no-repeat;   
    }
-.sub-nav li a:hover span,.sub-nav li a.current span{
+.sub-nav li a:hover span,.sub-nav li.active a span{
    background:url('../images/sub-hover-repeat.gif') right top no-repeat;  
    }
 .pro-list li{
