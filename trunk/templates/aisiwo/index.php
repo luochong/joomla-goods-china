@@ -28,16 +28,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	    <div id="head">
 		    <div class="logo"></div>
 			<div class="navgation">
-			    <ul>
-				    <li><a href="index.html" class="current"><span>首页</span></a></li>
-					<li><a href="enterprise-brief.html"><span>企业简介</span></a></li>
-					<li><a href="news-list.html"><span>新闻资讯</span></a></li>
-					<li><a href="product-list.html"><span>商品分类</span></a></li>
-					<li><a href="bargain-price.html"><span>特价促销</span></a></li>
-					<li><a href="design-style.html"><span>设计风格</span></a></li>
-					<li><a href="#"><span>商家招聘</span></a></li>
-					<li><a href="#"><span>联系我们</span></a></li>
-				</ul>
+				<jdoc:include type="modules" name="top" />
 			</div>
 		</div>
 		<div id="middle">
