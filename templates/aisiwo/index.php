@@ -200,31 +200,9 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 					</div>
 				</div>
 			    <div class="side">
-				    <div class="side-con">
-					    <div class="radius-t"><h2>企业简介</h2></div>
-						<div class="details">
-							<p class="enterprise"><img src="images/introduction.gif" alt=""/></p>
-							<p class="abstruct">艾斯沃整体家是J&amp;H集体旗下,由Hidde授
-	权的一家整体家综合性卖场旗下整合了优质的
-	建材家具以及配饰等家居品牌,让会员的购物步
-	骤简化成一步.同时还提供了整体设计等搭配方
-	案,除了能够体现完整...</p>
-	                       <p class="more"><a href="enterprise-brief.html">更多<<</a></p>
-	                    </div>
-						<div class="radius-b"></div>
-					</div>
-					<div class="side-con">
-					    <div class="radius-t"><h2>企业动态</h2></div>
-						<ul class="details">
-						    <li><a href="#">艾斯沃整体家长沙店盛大开业。</a></li>
-							<li><a href="#">10月23日艾斯沃整体家团购活动活动!</a></li>
-							<li><a href="#">ISORD整体家居0利润抢购。</a></li>
-							<li><a href="#">ISORD整体家居0利润抢购</a></li>
-							<li><a href="#">10月23日艾斯沃整体家团购活动活动!</a></li>
-							<li class="more"><a href="#">更多<<</a></li>
-						</ul>
-						<div class="radius-b"></div>
-					</div>
+				    <jdoc:include type="modules" name="side1" />
+				    <jdoc:include type="modules" name="side2" />
+                    <jdoc:include type="modules" name="side3" />
 					<div class="side-con">
 					    <div class="radius-t"><h2>行业新闻</h2></div>
 						<ul class="details">
