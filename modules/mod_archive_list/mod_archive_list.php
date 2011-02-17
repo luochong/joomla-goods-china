@@ -17,7 +17,9 @@ defined('_JEXEC') or die('Restricted access');
 // Include the syndicate functions only once
 require_once (dirname(__FILE__).DS.'helper.php');
 
-$params->def('count', 10);
-$list = modArchiveListHelper::getList($params);
+$params->def('count', 5);
+$lists_1 = modArchiveListHelper::getList($params,7); //企业动态
+$lists_2 = modArchiveListHelper::getList($params,8); //行业资讯
+$lists_3 = modArchiveListHelper::getList($params,9); //商家招聘
 
 require(JModuleHelper::getLayoutPath('mod_archive_list'));

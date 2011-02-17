@@ -48,32 +48,32 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 		</tr>
 		<tr>
 			<td class="key">
-				<span class="editlinktip hasTip" title="<?php echo JText::_( 'List Length' ); ?>::<?php echo JText::_( 'TIPSETSDEFAULTLENGTHLISTS' ); ?>">
-					<?php echo JText::_( 'List Length' ); ?>
-				</span>
+				<span class="editlinktip hasTip" title="客服热线::在页面显示的联系电话">
+			客服热线
+			</span>
 			</td>
 			<td>
-				<?php echo $lists['list_limit']; ?>
-			</td>
-		</tr>
-		<tr>
-			<td width="185" class="key">
-				<span class="editlinktip hasTip" title="<?php echo JText::_( 'Feedlimit' ); ?>::<?php echo JText::_( 'TIPFEEDLIMIT' ); ?>">
-					<?php echo JText::_( 'Feed Length' ); ?>
-				</span>
-			</td>
-			<td>
-				<?php echo $lists['feed_limit']; ?>
+				<input class="text_area" type="text" name="kfTel" size="50" value="<?php echo $row->kfTel; ?>" />
 			</td>
 		</tr>
 		<tr>
 			<td class="key">
-				<span class="editlinktip hasTip" title="<?php echo JText::_( 'Feed Email' ); ?>::<?php echo JText::_( 'TIPFEEDEMAIL' ); ?>">
-			<?php echo JText::_( 'Feed Email' ); ?>
+				<span class="editlinktip hasTip" title="销售热线::在页面显示的联系电话">
+			销售热线
 			</span>
 			</td>
 			<td>
-				<?php echo $lists['feed_email']; ?>
+				<input class="text_area" type="text" name="xsTel" size="50" value="<?php echo $row->xsTel; ?>" />
+			</td>
+		</tr>
+		<tr>
+			<td class="key">
+				<span class="editlinktip hasTip" title="联系QQ::在页面显示的客服QQ号">
+			联系QQ
+			</span>
+			</td>
+			<td>
+				<input class="text_area" type="text" name="qq" size="50" value="<?php echo $row->qq; ?>" />
 			</td>
 		</tr>
 	</tbody>
