@@ -18,40 +18,17 @@ defined('_JEXEC') or die('Restricted access');
 
 class modArchiveListHelper
 {
-	function getList(&$params)
+	function getList(&$params,$id)
 	{
 		//get database
 		$db =& JFactory::getDBO();
 
-//		$query = 'SELECT MONTH( created ) AS created_month, created, id, sectionid, title, YEAR(created) AS created_year' .
-//			' FROM #__content' .
-//			' WHERE ( state = -1 AND checked_out = 0 AND sectionid != 0)' .
-//			' GROUP BY created_year DESC, created_month DESC';
-//		$db->setQuery($query, 0, intval($params->get('count')));
-//		$rows = $db->loadObjectList();
-//
-//		$menu = &JSite::getMenu();
-//		$item = $menu->getItems('link', 'index.php?option=com_content&view=archive', true);
-//		$itemid = isset($item) ? '&Itemid='.$item->id : '';
-//
-//		$i		= 0;
-//		$lists	= array();
-//		foreach ( $rows as $row )
-//		{
-//			$date =& JFactory::getDate($row->created);
-//
-//			$created_month	= $date->toFormat("%m");
-//			$month_name		= $date->toFormat("%B");
-//			$created_year	= $date->toFormat("%Y");
-//
-//			$lists[$i]->link	= JRoute::_('index.php?option=com_content&view=archive&year='.$created_year.'&month='.$created_month.$itemid);
-//			$lists[$i]->text	= $month_name.', '.$created_year;
-//			$i++;
-//		}
-        $lists = '';
-        static $i;
-        $i++;
-        echo $i;
+		$query = 'SELECT a.id as id ,a.title as title,c.title as category  ' .
+			' FROM #__content as a,#__content_frontpage as b,#__categories as c  ' .
+			' WHERE ( c.id = a.catid AND b.content_id = a.id AND state = 1 AND sectionid != 0 AND catid = '.$id.'  )' .
+			' ORDER BY b.ordering ';
+		$db->setQuery($query, 0, intval($params->get('count')));
+		$lists = $db->loadObjectList();
 		return $lists;
 	}
 }

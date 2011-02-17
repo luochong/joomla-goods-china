@@ -51,6 +51,9 @@ class JConfig {
 	var $session_handler = 'database';
 	var $password = '';
 	var $sitename = '艾斯沃整体家 - isord';
+	var $kfTel = '12323';
+	var $xsTel = '1231';
+	var $qq = 'qq';
 	var $MetaDesc = '艾斯沃整体家 - isord';
 	var $MetaKeys = '艾斯沃整体家 - isord';
 	var $offline_message = '本站正在维护中，暂不能访问。 请稍后再访问本站。';

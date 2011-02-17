@@ -16,10 +16,25 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 <head>
 	<jdoc:include type="head" />
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/template.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
+	<?php
+	$db = & JFactory::getDbo();
+		$query	= 'SELECT template'
+				. ' FROM #__templates_menu'
+				. ' WHERE client_id = 0 AND menuid = 0';
 
-<?php if($this->direction == 'rtl') : ?>
-	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/template_rtl.css" type="text/css" />
+		$db->setQuery($query);
+		$template = $db->loadResult();
+
+ if($this->direction == 'rtl' && (!file_exists(JPATH_THEMES.DS.$template.DS.'css/template_rtl.css') || !file_exists(JPATH_THEMES.DS.$template.DS.'css/template.css'))) : ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/template_rtl.css" type="text/css" />
+<?php elseif($this->direction == 'rtl' ) : ?>
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $template; ?>/css/template.css" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $template; ?>/css/template_rtl.css" type="text/css" />
+<?php elseif($this->direction == 'ltr' && !file_exists(JPATH_THEMES.DS.$template.DS.'css/template.css')) : ?>
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/template.css" type="text/css" />
+<?php elseif($this->direction == 'ltr' ) : ?>
+<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $template; ?>/css/template.css" type="text/css" />
 <?php endif; ?>
 </head>
 <body class="contentpane">

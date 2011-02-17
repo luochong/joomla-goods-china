@@ -383,6 +383,15 @@ class ConfigControllerApplication extends ConfigController
 		$sitename			= htmlspecialchars( JRequest::getVar( 'sitename', '', 'post', 'string' ), ENT_COMPAT, 'UTF-8' );
 		$config->setValue('config.sitename', $sitename);
 
+		$kfTel			= htmlspecialchars( JRequest::getVar( 'kfTel', '', 'post', 'string' ),  ENT_COMPAT, 'UTF-8' );
+		$config->setValue('config.kfTel', $kfTel);
+		
+		$xsTel			= htmlspecialchars( JRequest::getVar( 'xsTel', '', 'post', 'string' ),  ENT_COMPAT, 'UTF-8' );
+		$config->setValue('config.xsTel', $xsTel);
+		
+		$qq			= htmlspecialchars( JRequest::getVar( 'qq', '', 'post', 'string' ),  ENT_COMPAT, 'UTF-8' );
+		$config->setValue('config.qq', $qq);
+		
 		$MetaDesc			= htmlspecialchars( JRequest::getVar( 'MetaDesc', '', 'post', 'string' ),  ENT_COMPAT, 'UTF-8' );
 		$config->setValue('config.MetaDesc', $MetaDesc);
 
