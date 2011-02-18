@@ -20,7 +20,7 @@ $query = 'SELECT name,market_price,shop_price,id,image ' .
 	' FROM #__goods ' .
 	' WHERE is_promotion = 1 AND published = 1 ' .
 	' ORDER BY id DESC';
-$db->setQuery($query, 0, 4);
+$db->setQuery($query);
 $lists = $db->loadObjectList();
 
 $className = array( 'r-margin b-margin', 'b-margin' , 'r-margin' , '');
@@ -33,7 +33,7 @@ $className = array( 'r-margin b-margin', 'b-margin' , 'r-margin' , '');
 	   <div class="category <?php echo $className[$i]?>">
 		    <img src="<?php echo JURI::base() ?>/<?php echo $list->image ?>" alt=""/>
 			<ul>
-			    <li class="bold"><a href="index.php?option=com_goods&view=goods&layout=item&id=<?php echo $list->id?>"><?php echo $list->name ?></a></li>
+			     <li class="bold"><a href="index.php?option=com_goods&view=goods&layout=item&id=<?php echo $list->id?>"><?php echo $list->name ?></a></li>
 				<li class="prime-cost">原价:<?php echo $list->market_price ?>元;</li>
 				<li class="now-cost">现价:<?php echo $list->shop_price ?>元;</li>
 			</ul>

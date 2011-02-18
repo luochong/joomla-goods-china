@@ -81,6 +81,7 @@ class WeblinksViewWeblink extends JView
 			$weblink->approved 	= 1;
 			$weblink->order 	= 0;
 			$weblink->catid 	= JRequest::getVar( 'catid', 0, 'post', 'int' );
+			$weblink->image     = '';
 		}
 
 		// build the html select list for ordering
@@ -95,7 +96,13 @@ class WeblinksViewWeblink extends JView
 		$lists['catid'] 			= JHTML::_('list.category',  'catid', $option, intval( $weblink->catid ) );
 		// build the html select list
 		$lists['published'] 		= JHTML::_('select.booleanlist',  'published', 'class="inputbox"', $weblink->published );
-
+        
+		JHTML::_('behavior.modal');
+		$directory = JPATH_SITE.DS.'images'.DS.'stories';
+		$lists['image'] = '<div class="button2-left"><div class="image">';
+		$lists['image'] .= "<a rel=\"{handler: 'iframe', size: {x: 570, y: 400}}\" href=\"".JURI::base()."index.php?option=com_media&amp;view=images&amp;tmpl=component&amp;e_name=image&folder=".$directory."\" title=\"".JText::_('Image')."\" class=\"modal\">".JText::_('Image')."</a>";
+		$lists['image'] .= '</div></div>';
+		
 		//clean weblink data
 		JFilterOutput::objectHTMLSafe( $weblink, ENT_QUOTES, 'description' );
 

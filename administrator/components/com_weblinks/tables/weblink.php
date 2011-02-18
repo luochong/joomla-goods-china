@@ -105,6 +105,8 @@ class TableWeblink extends JTable
 	 * @var string
 	 */
 	var $params = null;
+	
+	var $image = null;
 
 	/**
 	 * Constructor
