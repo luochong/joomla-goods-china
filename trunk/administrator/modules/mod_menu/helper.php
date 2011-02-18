@@ -192,7 +192,7 @@ class modMenuHelper
 
 		/*
 		 * Extensions SubMenu
-		 */
+
 		if ($installModules)
 		{
 			$menu->addChild(new JMenuNode(JText::_('Extensions')), true);
@@ -214,7 +214,7 @@ class modMenuHelper
 			$menu->getParent();
 		}
 
-		/*
+	
 		 * System SubMenu
 		
 		if ($canConfig || $canCheckin)
@@ -292,18 +292,18 @@ class modMenuHelper
 			$menu->addChild(new JMenuNode(JText::_('Components'), null, 'disabled'));
 		}
 
-		// Extensions SubMenu
-		if ($installModules) {
-			$menu->addChild(new JMenuNode(JText::_('Extensions'), null, 'disabled'));
-		}
-
-		// System SubMenu
-		if ($canConfig) {
-			$menu->addChild(new JMenuNode(JText::_('Tools'),  null, 'disabled'));
-		}
-
-		// Help SubMenu
-		$menu->addChild(new JMenuNode(JText::_('Help'),  null, 'disabled'));
+//		 Extensions SubMenu
+//		if ($installModules) {
+//			$menu->addChild(new JMenuNode(JText::_('Extensions'), null, 'disabled'));
+//		}
+//
+//		 System SubMenu
+//		if ($canConfig) {
+//			$menu->addChild(new JMenuNode(JText::_('Tools'),  null, 'disabled'));
+//		}
+//
+//		 Help SubMenu
+//		$menu->addChild(new JMenuNode(JText::_('Help'),  null, 'disabled'));
 
 		$menu->renderMenu('menu', 'disabled');
 	}

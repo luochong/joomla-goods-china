@@ -14,20 +14,7 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
 
-$version = new JVersion();
-
 ?>
-<!--<div>
-	<?php echo $version->URL; ?>
-</div>
 
-<div class="smallgrey">
-	<?php echo $version->getLongVersion(); ?>
-</div>
-
-<div>
-	<a href="http://www.joomla.org/content/blogcategory/32/66/" target="_blank"><?php echo JText::_( 'Check for latest Version' ); ?></a>
-</div>
--->
-			<a href="http://www.joomla.org" target="_blank">艾斯沃整体家</a>
-			<?php echo  JText::_('ISFREESOFTWARE') ?>
+			<a href="#" target="_blank">技术支持： 春哥工作室</a>
+		

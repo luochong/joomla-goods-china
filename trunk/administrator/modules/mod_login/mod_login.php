@@ -53,10 +53,7 @@ endif; ?>
 		echo '<p>';
 	}
 	?>
-	<p id="form-login-lang" style="clear: both;">
-		<label for="lang"><?php echo JText::_('Language'); ?></label>
-		<?php echo $langs; ?>
-	</p>
+
 	<div class="button_holder">
 	<div class="button1">
 		<div class="next">
