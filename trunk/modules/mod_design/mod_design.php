@@ -41,9 +41,9 @@ $lists = $db->loadObjectList();
 			?>
 			<img <?php echo $a[0]?> width="138" height="108" alt="<?php echo $list->title?>" />
 			<ul>
-				<li class="bold"><?php  echo $list->title?></li>
+				<li class="bold"><a href="index.php/design/<?php echo $list->id?>"><?php  echo $list->title?></a></li>
 				<li><?php echo strip_tags( $list->introtext ); ?></li>
-				<li class="more"><a href="design-style.html">了解更多<<</a></li>
+				<li class="more"><a href="index.php/design/<?php echo $list->id?>">了解更多<<</a></li>
 			</ul>
 		</div>
 		<?php endforeach;?>

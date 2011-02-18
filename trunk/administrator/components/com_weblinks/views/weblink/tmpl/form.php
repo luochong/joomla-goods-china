@@ -37,6 +37,22 @@
 		}
 	}
 </script>
+<script language="javascript" type="text/javascript">
+	function changeDisplayImage() {
+			if (document.adminForm.image.value !='') {
+				document.adminForm.imagelib.src='../' + document.adminForm.image.value;
+			} else {
+				document.adminForm.imagelib.src='images/blank.png';
+			}
+	}
+	function jInsertEditorText(tag, id){
+		tag = tag.replace("<img src=\"","");
+		var end = tag.indexOf("\"");
+		tag = tag.substring(0,end);
+		document.adminForm.image.value = tag;
+		changeDisplayImage();
+	}
+</script>
 <style type="text/css">
 	table.paramlist td.paramlist_key {
 		width: 92px;
@@ -109,6 +125,33 @@
 				<?php echo $this->lists['ordering']; ?>
 			</td>
 		</tr>
+			<tr>
+		<td class="key">
+			<label for="image">
+				<?php echo JText::_( '链接图片' ); ?>:
+			</label>
+		</td>
+		<td>
+			<input style="float: left; padding: 3px 2px;" name="image" id="image" type="text" size="50" value="<?php echo $this->weblink->image; ?>" onchange="changeDisplayImage();" /><?php if ($this->lists['image']) echo $this->lists['image']; ?>
+		</td>
+	</tr>
+	<tr>
+		<td>&nbsp;
+		</td>
+		<td valign="top">
+			<?php
+			if (preg_match("#gif|jpg|png#i", $this->weblink->image)) {
+				?>
+				<img src="../<?php echo $this->weblink->image; ?>" name="imagelib" />
+				<?php
+			} else {
+				?>
+				<img src="images/blank.png" name="imagelib" />
+				<?php
+			}
+			?>
+		</td>
+	</tr>
 	</table>
 	</fieldset>
 </div>

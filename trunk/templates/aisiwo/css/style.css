@@ -442,6 +442,7 @@ h1{
 .mainpart .abstruct{
     text-indent:2em;
 	margin-top:20px;
+	font-size:15px;
 	}
 /*   banner  js-style*/
 .screen{ 
@@ -484,3 +485,34 @@ h1{
 #tab .block{
 	display:block;
 	}
+h2.contentheading{
+	padding: 5px 0 8px;
+	margin: 0;
+	text-align:center;
+}
+.main .article-content{
+    padding-top:15px;
+}
+.main .article-content p{
+     font-size: 15px;
+    line-height: 200%;
+    }
+.main-article{
+    background: none repeat scroll 0 0 #FDFEFF;
+    border:1px solid #D0D0D0;
+    padding:20px 30px 20px 30px;
+}
+.article-meta{
+    float:left;
+    width:85%;
+    text-align:center;
+}
+.article-tools{
+    margin-top:8px;
+    padding-bottom:15px;
+    border-bottom:1px solid #D0D0D0;
+}
+.modifydate{
+    margin-top:15px;
+    text-align:right;
+}

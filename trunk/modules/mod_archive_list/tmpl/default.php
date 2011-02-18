@@ -10,7 +10,7 @@ defined('_JEXEC') or die('Restricted access'); ?>
     <div class="radius-t"><h2><?php echo $lists[0]->category ?></h2></div>
 	<ul class="details">
 	    <?php foreach($lists as $list):?>
-	    <li><a href="<?php echo JRoute::_('index.php?option=com_content&view=article&id='.$list->id);?>"><?php echo $list->title ?></a></li>
+	    <li><a href="/index.php/news/1/<?php echo $list->id;?>"><?php echo $list->title ?></a></li>
 	    <?php endforeach;?>
 		<li class="more"><a href="#">更多<<</a></li>
 	</ul>

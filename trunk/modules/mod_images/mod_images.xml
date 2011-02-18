@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Images</name>
+	<author>Joomla! Project</author>
+	<creationDate>July 2006</creationDate>
+	<copyright>Copyright (C) 2005 - 2010 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>admin@joomla.org</authorEmail>
+	<authorUrl>www.joomla.org</authorUrl>
+	<version>1.5.0</version>
+	<description>首页幻灯图片</description>
+	<files>
+		<filename module="mod_images">mod_images.php</filename>
+	</files>
+	<params>
+		<param name="image_name_1" type="text" default="1.jpg" label="第一张图片" description="首页第一张幻灯图片" />
+		<param name="image_name_2" type="text" default="2.jpg" label="第二张图片" description="首页第二张幻灯图片" />
+    	<param name="image_name_3" type="text" default="3.jpg" label="第三张图片" description="首页第三张幻灯图片" />
+    </params>
+</install>

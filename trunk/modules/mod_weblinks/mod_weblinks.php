@@ -1,3 +1,4 @@
+<ul>
 <?php
     function escape($var)
     {
@@ -14,6 +15,7 @@ $query = 'SELECT *' .
 $db->setQuery($query);
 $items = $db->loadObjectList();
 $count = count($items);
+$count = $count > 5 ? 5:$count;
 
 //http://www.joomla.com/index.php/component/weblinks/16-2011-02-17-16-35-57/1-2011-02-17-16-36-31
 for($i = 0; $i < $count; $i++)
@@ -30,31 +32,27 @@ for($i = 0; $i < $count; $i++)
 		// cases are slightly different
 		case 1:
 			// open in a new window
-			$item->link = '<a href="'. $link .'" target="_blank" ><img src="'.$item->image .'" alt="'. escape($item->title) .'"/></a>';
+			$item->link = '<a href="'. $link .'" target="_blank" title="'.$item->title.'" ><img src="'.$item->image .'" alt="'. escape($item->title) .'"/></a>';
 			break;
 
 		case 2:
 			// open in a popup window
-			$item->link = "<a href=\"#\" onclick=\"javascript: window.open('". $link ."', '', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=550'); return false\" ><img src=\"".$item->image ."\" alt=\"". escape($item->title) ."\"/></a>";
+			$item->link = "<a href=\"#\" title=\"".$item->title."\" onclick=\"javascript: window.open('". $link ."', '', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=780,height=550'); return false\" ><img src=\"".$item->image ."\" alt=\"". escape($item->title) ."\"/></a>";
 			break;
 
 		default:
 			// formerly case 2
 			// open in parent window
-			$item->link = '<a href="'. $link .'" ><img src="'.$item->image .'" alt="'. escape($item->title) .'"/></a>';
+			$item->link = '<a href="'. $link .'" title="'.$item->title.'"  ><img src="'.$item->image .'" alt="'. escape($item->title) .'"/></a>';
 			break;
 	}
+	?>
 	
+	 <li <?php echo $i == $count - 1 ? 'class="margin-r"':''?>>
+       <?php echo $item->link;?>
+    </li>
+	<?php
 }
 
 ?>
-
-
-<ul>
-    <?php foreach($items as $i => $item):?>
-    <li <?php echo $i == count($items) - 1 ? 'class="margin-r"':''?>>
-       <?php echo $item->link?>
-    </li>
-    <?php endforeach;?>
-  
 </ul>

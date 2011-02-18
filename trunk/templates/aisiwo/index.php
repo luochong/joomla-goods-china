@@ -33,27 +33,7 @@ $cfg = new JConfig();
 			</div>
 		</div>
 		<div id="middle">
-			<div class="banner">
-			    <div class="radius-t"><h1>企业品牌</h1></div>
-				<div class="show-area">
-				    <div class="picture screen">
-					    <div class="info" id="info">
-					        <div><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/banner1.gif" alt=""/></a></div>
-					        <div><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/banner2.jpg" alt=""/></a></div>
-					        <div><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/banner3.jpg" alt=""/></a></div>
-						</div>
-					</div>
-					<div class="list">
-						<ul class="pic-list" id="list">
-							<li class="cur"><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/ban1.gif" alt=""/></a></li>
-							<li><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/ban2.gif" alt=""/></a></li>
-							<li><a href="#nogo"><img src="<?php echo $this->baseurl ?>/templates/aisiwo/images/ban3.gif" alt=""/></a></li>
-						</ul>
-					</div>
-					<div class="clear"></div>
-				</div>
-			    <div class="radius-b"></div>				
-			</div>
+			<jdoc:include type="modules" name="breadcrumb" />
 			<div class="content">
 			    <div class="main">
 			        <jdoc:include type="component" />
@@ -85,16 +65,15 @@ $cfg = new JConfig();
 			</div>			
 		</div>
 		<div id="foot">
-				<p>copright 2010 Isord.cn &nbsp;&nbsp;@&nbsp;&nbsp;版权所有 不得转载</p>
+				<p>copright 2010 isord.cn &nbsp;&nbsp;&copy;&nbsp;&nbsp;版权所有 不得转载 &nbsp;&nbsp;&nbsp;&nbsp;技术支持：春哥工作室</p>
 				<ul>
-					<li><a href="#">首页</a><span>|</span></li>
-					<li><a href="#">企业简介</a><span>|</span></li>
-					<li><a href="#">新闻资讯</a><span>|</span></li>
-					<li><a href="#">商品分类</a><span>|</span></li>
-					<li><a href="#">特价促销</a><span>|</span></li>
-					<li><a href="#">设计风格</a><span>|</span></li>
-					<li><a href="#">商家招聘</a><span>|</span></li>
-					<li><a href="#">联系我们</a></li>
+					<li><a href="index.php">首页</a><span>|</span></li>
+					<li><a href="index.php/corporation-profile">企业简介</a><span>|</span></li>
+					<li><a href="index.php/news">新闻资讯</a><span>|</span></li>
+					<li><a href="index.php/goodscat">商品分类</a><span>|</span></li>
+					<li><a href="index.php/tjcx">特价促销</a><span>|</span></li>
+					<li><a href="index.php/design">设计风格</a><span>|</span></li>
+					<li><a href="index.php/contact">联系我们</a></li>
 				</ul>
                 <div class="clear"></div>				
 		</div>
