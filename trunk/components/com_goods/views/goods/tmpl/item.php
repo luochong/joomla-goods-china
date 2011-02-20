@@ -18,7 +18,7 @@ $db =& JFactory::getDBO();
 
 $query = 'SELECT * ' .
 	' FROM #__goods ' .
-	' WHERE is_promotion = 1 AND published = 1 AND id = '.$id.' '.
+	' WHERE published = 1 AND id = '.$id.' '.
 	' ORDER BY id DESC';
 $db->setQuery($query);
 $list = $db->loadObject();
