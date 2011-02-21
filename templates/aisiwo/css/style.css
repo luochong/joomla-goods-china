@@ -333,11 +333,11 @@ h1{
    line-height:30px;
    padding:0 15px 0 0;   
    }
-.sub-nav li a:hover,.sub-nav li.active a{
+.sub-nav li a:hover,.sub-nav li a.current{
    color:#f3ae35;
    background:url('../images/sub-hover.gif') 0 0 no-repeat;   
    }
-.sub-nav li a:hover span,.sub-nav li.active a span{
+.sub-nav li a:hover span,.sub-nav li a.current span{
    background:url('../images/sub-hover-repeat.gif') right top no-repeat;  
    }
 .pro-list li{

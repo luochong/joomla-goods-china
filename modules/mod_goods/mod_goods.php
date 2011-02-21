@@ -41,7 +41,7 @@ foreach($goodses_tmp as $v)
 	<div class="mainpart" id="tab">
 		<ul class="sub-nav">						    
 			<?php foreach($categories as $i=>$v):?>
-		    <li><a href="#" class="current" onmouseover="go_to(<?php echo $i+1?>,this);"><span><?php echo $v['title']?></span></a></li>
+		    <li><a href="#" <?php echo $i == 0? 'class="current"':''?> onmouseover="go_to(<?php echo $i+1?>,this);"><span><?php echo $v['title']?></span></a></li>
 		    <?php endforeach;?>
 		</ul>
 		<p class="clear"></p>
