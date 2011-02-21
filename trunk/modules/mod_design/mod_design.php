@@ -42,7 +42,7 @@ $lists = $db->loadObjectList();
 			<img <?php echo $a[0]?> width="138" height="108" alt="<?php echo $list->title?>" />
 			<ul>
 				<li class="bold"><a href="index.php/design/<?php echo $list->id?>"><?php  echo $list->title?></a></li>
-				<li><?php echo strip_tags( $list->introtext ); ?></li>
+				<li><?php echo mb_substr(strip_tags( $list->introtext ), 0, 100, 'UTF-8'); ?>......</li>
 				<li class="more"><a href="index.php/design/<?php echo $list->id?>">了解更多<<</a></li>
 			</ul>
 		</div>

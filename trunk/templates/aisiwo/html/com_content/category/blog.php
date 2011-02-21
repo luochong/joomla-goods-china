@@ -14,7 +14,7 @@
 			<img <?php echo $a[0]?> width="138" height="108" alt="<?php echo $item->title?>" />
 								<ul>
 									<li class="bold"><a href="index.php/design/<?php echo $item->id?>"><?php echo $item->title?></a></li>
-									<li><?php echo strip_tags($item->introtext)?>
+									<li><?php echo mb_substr(strip_tags( $item->introtext ), 0, 100, 'UTF-8'); ?>......</li>
 								</ul>
 							</div>
 <?php endforeach;?>

@@ -50,7 +50,7 @@ $cfg = new JConfig();
 						<ul class="service-details">
 						    <li><p class="order">A</p><p><span>客服热线</span><span><?php echo $cfg->kfTel?> </span></p></li>
 							<li><p class="order">B</p><p><span>销售热线</span><span><?php echo $cfg->xsTel?></span></p></li>
-							<li><p class="order">C</p><p><a class="qq-number" href="#"><?php echo $cfg->qq?></a></p></li>
+							<li><p class="order">C</p><p style="padding-top:10px;"><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $cfg->qq?>&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:<?php echo $cfg->qq?>:42" alt="点击这里给我发消息" title="点击这里给我发消息"></a></p></li>
 						</ul>
 						<div class="service-b"></div>
 					</div>						
